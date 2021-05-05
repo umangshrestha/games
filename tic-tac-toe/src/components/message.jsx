@@ -9,6 +9,6 @@ const style = {
 	textAlign:'center' 
 };
 
-const Message = (props) => <h1 style={style}>{props.value}</h1>	
+const Message = (props) => <h1 name={"msg"} style={style}>{props.value}</h1>	
 
 export default Message

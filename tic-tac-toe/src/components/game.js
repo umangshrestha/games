@@ -28,7 +28,8 @@ const Game = () => {
     const refresh  = () => {
        setBoard(Array(9).fill(0)); 
        setStatus(Array(8).fill(0));
-       setMessage("Click to start")    
+       setIsPlayer(1);
+       setMessage("Click to start");    
     }
 
     const handleInput = (input) => {    
