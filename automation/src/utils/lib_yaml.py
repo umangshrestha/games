@@ -19,7 +19,6 @@ def yaml_to_dict(file_name: str, folder_name: str =  _path_to_config)-> dict:
     '''
     data: dict = dict()
     _file: str  = join(folder_name, file_name)
-    print(_file)
     if not exists(_file): raise IOError(f"{_file} not found")
 
     with open(_file, 'r') as f:

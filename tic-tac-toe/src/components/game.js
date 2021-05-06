@@ -42,13 +42,14 @@ const Game = () => {
         const [row, column] = input.split("-").map( (i) => parseInt(i, 10));
         let pos = getPos(row, column)
         const boardCopy = [...board]
+    
         // only run if box hasn't been clicked before
         if (boardCopy[pos] !== 0){
             return
         }
         let val = isPlayer? "O": "X";
         boardCopy[pos] = val;
-        setBoard(boardCopy); // updating board   
+        setBoard(boardCopy); // updating board  
         let newStatus = updateStatus(row, column) 
         if (isWon(newStatus)){
             // once game is over
@@ -56,9 +57,15 @@ const Game = () => {
             setIsPlayer(-1);
             return;
         }
-        setIsPlayer(!isPlayer); // updating player
-        setMessage(`TURN: ${isPlayer? "X": "O"}`)
-        setStatus(newStatus); // updating status
+        console.log(boardCopy, boardCopy.indexOf(0))
+        if (boardCopy.indexOf(0)===-1){
+            // if no more moves game is draw
+            setMessage(`DRAW`)
+        } else {
+            setIsPlayer(!isPlayer); // updating player
+            setMessage(`TURN: ${isPlayer? "X": "O"}`)
+            setStatus(newStatus); // updating status
+        }
     }
 
     return (

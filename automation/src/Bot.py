@@ -16,17 +16,27 @@ from utils.lib_yaml import yaml_to_dict
 
 
 class Bot:
+    '''
+    This module is used in robot framework testing
+    and is used to get state for AI
+    '''
 
     ROBOT_LIBRARY_SCOPE = 'TEST SUITE'
 
-    def __init__(self):
+    def __init__(self, display:bool=False):
         options = Options()
         options.headless = True
         self._dict = yaml_to_dict("settings.yaml")
-        self.driver: webdriver  = webdriver.Firefox(
-            options=options, 
-            executable_path=self._dict["Driver"]
-        )
+        self.driver: webdriver  = None
+        if display:
+            self.driver = webdriver.Firefox(
+                options=options, 
+                executable_path=self._dict["Driver"]
+            )
+        else:
+            self.driver = webdriver.Firefox(
+                executable_path=self._dict["Driver"]
+            )
         self.driver.get(self._dict["Url"])
         
     def read_all_elements(self):
@@ -54,3 +64,5 @@ class Bot:
     def get_title(self):
         ''' get the title of the robot framework '''
         return {"Title": self.driver.title}
+
+    
