@@ -8,6 +8,6 @@ const style = {
 	fontWeight: "800",
 };
 
-const Button = (props) => <button name={"btn"} style={style} onClick={props.onClick}>{props.value}</button>
+const Refresh = (props) => <button name={"btn"} style={style} onClick={props.onClick}>{props.value}</button>
 
-export default Button
+export default Refresh

@@ -1,16 +1,8 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from './App';
 
-
-test('Test react renders default message', () => {
+test('renders learn react link', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Click to start/i);
+  const linkElement = screen.getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
 });
-
-test('Test react renders refresh button', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/refresh/i);
-  expect(linkElement).toBeInTheDocument();
-});
-

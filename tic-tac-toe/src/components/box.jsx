@@ -1,29 +1,16 @@
 import React from 'react'
 
-const styleO = {
-	background: "lightblue",
-	border: "3px solid darkblue",
+const style = {
+	border: "3px solid black",
 	fontSize: "40px",
-	fontWeight: "800",
-	color: 'green',
-	cursor: "pointer",
-	outline: "none",
-};
+}   
 
-const styleX = {
-	background: "lightblue",
-	border: "3px solid darkblue",
-	fontSize: "40px",
-	fontWeight: "800",
-	color: 'red',
-	cursor: "pointer",
-	outline: "none",
-};
 
-const Box = (props) => (
-	<button name={props.name} style={props.value === "X"? styleX: styleO} onClick={props.onClick}>
-		{props.value}
-	</button>
-)
+/*
+Box.jsx is the discrete unit structure of the board ui.
+It is made a button.
+When its pressed it will call the function passed from porps.
+*/
+const Box = (props) => <button name={props.name} style={style} onClick={props.onClick}> {props.value} </button>
 
 export default Box
