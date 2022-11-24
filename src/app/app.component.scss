@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+}
+.container {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer{
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+p {
+    margin: auto;
+    text-align:center;
+    padding:10px;
+}

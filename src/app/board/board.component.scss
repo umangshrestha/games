@@ -1,0 +1,17 @@
+$size: 100px;
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, $size);
+    grid-gap: 0px;
+}
+
+app-square {
+    width: $size;
+    height: $size;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}

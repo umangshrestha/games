@@ -1,0 +1,3 @@
+<button  mat-stroked-button color="accent" *ngIf="value === 'X'"  [disabled]="disable"> {{value}}</button>
+<button  mat-stroked-button color="primary" *ngIf="value === 'O'" [disabled]="disable"> O </button>
+<button  mat-stroked-button  *ngIf="!value" [disabled]="disable">  </button>
