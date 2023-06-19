@@ -1,7 +1,7 @@
-import React, { type FC } from 'react'
-import styles from './HistoryBoard.module.css'
-import { History } from '../History/History'
-import { type HistoryBoardProps } from './HistoryBoard.types'
+import { type FC } from 'react';
+import styles from './HistoryBoard.module.css';
+import { History } from '../History/History';
+import { type HistoryBoardProps } from './HistoryBoard.types';
 
 export const HistoryBoard: FC<HistoryBoardProps> = ({
   history,
@@ -11,7 +11,12 @@ export const HistoryBoard: FC<HistoryBoardProps> = ({
     <ul className={styles.elem}>
       {history.map((_, move) => (
         <li key={move}>
-          <History text={`Goto #${move}`} onClick={() => { selectHistory(move) }} />
+          <History
+            text={`Goto #${move}`}
+            onClick={() => {
+              selectHistory(move)
+            }}
+          />
         </li>
       ))}
     </ul>

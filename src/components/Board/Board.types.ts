@@ -1,4 +1,4 @@
-import { type SquareValue } from '../Square/Square.types'
+import { type SquareValue } from '../Square/Square.types';
 
 export interface BoardProps {
   board: SquareValue[]

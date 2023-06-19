@@ -1,4 +1,4 @@
-import React, { type FC, useEffect } from 'react'
+import { type FC, useEffect } from 'react'
 import { connect } from 'react-redux'
 import {
   makeMove,
@@ -45,7 +45,9 @@ const TicTacToe: FC<TicTacToeProps> = ({
         setBoard(move)
       }
     }, 1000)
-    return () => { clearTimeout(timer) }
+    return () => {
+      clearTimeout(timer)
+    }
   }, [board, player, gameState, makeMove])
 
   return (

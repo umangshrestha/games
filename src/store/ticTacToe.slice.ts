@@ -16,7 +16,9 @@ const ticTacToSlice = createSlice({
       if (
         state.gameState !== GameState.XTurn &&
         state.gameState !== GameState.OTurn
-      ) { return }
+      ) {
+        return
+      }
 
       const index = action.payload as number
       if (state.board[index] !== SquareValue.None) return

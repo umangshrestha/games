@@ -1,16 +1,16 @@
-import React, { FC } from 'react';
-import { DropDownMenuProps } from './DropDownMenu.types';
+import { type FC } from 'react';
+import { type DropDownMenuProps } from './DropDownMenu.types';
 import { SquareValue } from '../Square/Square.types';
 import styles from './DropDownMenu.module.css';
 
 export const DropDownMenu: FC<DropDownMenuProps> = ({
   player,
   selectPlayer,
-  resetGame,
+  resetGame
 }) => {
   if (player === SquareValue.None) {
-    selectPlayer(SquareValue.X);
-    resetGame();
+    selectPlayer(SquareValue.X)
+    resetGame()
   }
 
   return (
@@ -18,7 +18,9 @@ export const DropDownMenu: FC<DropDownMenuProps> = ({
       <h2>Game Mode</h2>
       <select
         value={player}
-        onChange={(e) => selectPlayer(e.target.value as SquareValue)}
+        onChange={(e) => {
+          selectPlayer(e.target.value as SquareValue)
+        }}
       >
         <option value={SquareValue.X}>Player(X) vs AI(O)</option>
         <option value={SquareValue.O}>Player(O) vs. AI(X)</option>
@@ -27,5 +29,5 @@ export const DropDownMenu: FC<DropDownMenuProps> = ({
         Reset Game
       </button>
     </div>
-  );
-};
+  )
+}

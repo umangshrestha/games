@@ -1,8 +1,7 @@
-import React from 'react'
-import { fireEvent, render, screen } from '@testing-library/react'
-import { Board } from './Board'
-import { SquareValue } from '../Square/Square.types'
-import jest from 'jest-mock'
+import { fireEvent, render, screen } from '@testing-library/react';
+import { Board } from './Board';
+import { SquareValue } from '../Square/Square.types';
+import jest from 'jest-mock';
 
 describe('Board', () => {
   it.each([SquareValue.None, SquareValue.X, SquareValue.O])(

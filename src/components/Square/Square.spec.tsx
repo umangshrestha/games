@@ -1,8 +1,7 @@
-import React from 'react'
-import { render, screen, fireEvent } from '@testing-library/react'
-import { Square } from './Square'
-import { SquareValue } from './Square.types'
-import jest from 'jest-mock'
+import { render, screen, fireEvent } from '@testing-library/react';
+import { Square } from './Square';
+import { SquareValue } from './Square.types';
+import jest from 'jest-mock';
 
 describe('Square', () => {
   it.each([

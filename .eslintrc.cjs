@@ -10,15 +10,16 @@ module.exports = {
     project: ['./tsconfig.json'],
   },
   rules: {
-    "jsx-quotes": ["error", "prefer-double"]
+    "jsx-quotes": ["error", "prefer-double"],
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "semi": "error"
   },
   settings: {
     react: {
+      pragma: "React",
       version: "detect"
     }
   },
   plugins: ['react'],
-  rules: {
-    "@typescript-eslint/explicit-function-return-type": "off",
-  },
 };

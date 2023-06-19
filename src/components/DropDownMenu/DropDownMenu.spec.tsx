@@ -1,8 +1,7 @@
-import React from 'react'
-import { fireEvent, render, screen } from '@testing-library/react'
-import { DropDownMenu } from './DropDownMenu'
-import { SquareValue } from '../Square/Square.types'
-import jest from 'jest-mock'
+import { fireEvent, render, screen } from '@testing-library/react';
+import { DropDownMenu } from './DropDownMenu';
+import { SquareValue } from '../Square/Square.types';
+import jest from 'jest-mock';
 
 describe('DropDownMenu', () => {
   it.each([SquareValue.None, SquareValue.X, SquareValue.O])(

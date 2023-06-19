@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import TicTacToe from './pages/TicTacToe/TicTacToe'
 import styles from './App.module.css'
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import TicTacToe from './TicTacToe'
 import { type Meta } from '@storybook/react'
 import { Provider } from 'react-redux'

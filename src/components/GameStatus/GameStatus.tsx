@@ -1,6 +1,6 @@
-import React, { Fragment, type FC } from 'react'
-import styles from './GameStatus.module.css'
-import { GameState } from './GameStatus.types'
+import { Fragment, type FC } from 'react';
+import styles from './GameStatus.module.css';
+import { GameState } from './GameStatus.types';
 
 export const GameStatus: FC<{ gameState: GameState }> = ({ gameState }) => {
   if (gameState === GameState.XTurn || gameState === GameState.OTurn) {
@@ -14,8 +14,12 @@ export const GameStatus: FC<{ gameState: GameState }> = ({ gameState }) => {
             checked={gameState === GameState.XTurn}
             readOnly
           />
-          <span key="xTurn" className={styles.XTurn}>X Turn</span>
-          <span key="oTurn" className={styles.OTurn}>O Turn</span>
+          <span key="xTurn" className={styles.XTurn}>
+            X Turn
+          </span>
+          <span key="oTurn" className={styles.OTurn}>
+            O Turn
+          </span>
         </label>
       </div>
     )
@@ -58,7 +62,9 @@ export const GameStatus: FC<{ gameState: GameState }> = ({ gameState }) => {
               readOnly
             />
             <label htmlFor={id} className={styles.toggle} key={`label-${id}`}>
-              <span key={`span-${id}`} className={className}>{text}</span>
+              <span key={`span-${id}`} className={className}>
+                {text}
+              </span>
             </label>
           </Fragment>
         ))}

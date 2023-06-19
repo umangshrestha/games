@@ -1,6 +1,6 @@
-import { type Meta } from '@storybook/react'
-import { Board } from './Board'
-import { SquareValue } from '../Square/Square.types'
+import { type Meta } from '@storybook/react';
+import { Board } from './Board';
+import { SquareValue } from '../Square/Square.types';
 
 export default {
   title: 'Board',
