@@ -1,0 +1,27 @@
+.footer {
+  flex-shrink: 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: var(--Background);
+  color: white;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.header {
+  margin: 0;
+  padding: var(--padding);
+  color: white;
+  background-color: var(--Background);
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    position: relative;
+    bottom: 0;
+    margin-top: var(--margin);
+  }
+}

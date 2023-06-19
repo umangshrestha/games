@@ -1,0 +1,31 @@
+@import '../../styles/variables.css';
+
+.square {
+  font-size: var(--square-font-size);
+  border: none;
+  height: var(--square-size);
+  width: var(--square-size);
+  background-color: var(--square-background);
+}
+
+.square[data-value='X'] {
+  color: var(--X);
+}
+
+.square[data-value='O'] {
+  color: var(--O);
+}
+
+.square:disabled {
+  color: var(--Disabled);
+}
+/* 2nd, 5th, 8th */
+.square:nth-child(3n + 2) {
+  border-right: var(--square-border);
+  border-left: var(--square-border);
+}
+
+/* 4th, 5th, 6th */
+.square:nth-child(n + 4) {
+  border-top: var(--square-border);
+}

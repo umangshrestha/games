@@ -1,0 +1,9 @@
+@import '../../styles/variables.css';
+
+.board {
+  width: var(--board-size);
+  height: var(--board-size);
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-gap: 0;
+}

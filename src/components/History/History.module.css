@@ -1,0 +1,17 @@
+@import '../../styles/variables.css';
+
+.historyButton {
+  font-size: var(--history-font-size);
+  border: none;
+  border-radius: var(--border-radius);
+  color: white;
+  height: var(--history-height);
+  width: var(--history-width);
+  padding: 0;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.historyButton:hover {
+  background-color: var(--history-hover-color);
+}
