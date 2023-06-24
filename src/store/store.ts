@@ -6,5 +6,3 @@ export const store = configureStore({
     ticTacToe: ticTacToeReducer
   }
 })
-
-export default store
